@@ -1,4 +1,5 @@
 To build:
+ (dependences) sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
  ./configure --prefix=/home/tim/riscv --with-arch=rv32i --with-abi=ilp32
  make -j 3
 It's very important to configure --with-arch=rv32i because the newlib library is built under this arch. with-abi might be inferred by with-arch anyway but it doesn't hurt to specify explicitly.
